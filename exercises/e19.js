@@ -1,13 +1,18 @@
-
 // EXERCISE 19
 // Please, read the exercise-info/reverse.md to get the initial data of what is the expected result of this exercise.
 // reverseArray([1, 2, 3 ,4]) => [4, 3, 2, 1]
 // NOTE: You can NOT use the array.reverse() method in your code
 
 export function reverseArray(array) {
-  // Your code goes here...
-
+    // Your code goes here...
+    let moveBack = [];
+    for (let i = array.length - 1; i >= 0; i--) {
+        moveBack.push(array[i]);
+    }
+    console.log(moveBack);
+    return moveBack
 }
+
 
 
 
