@@ -3,19 +3,32 @@
 // Array example: bankAccounts in /data/data.js
 // getAllAccountsWithSumsOfDepositsLess2000(bankAccounts) => [3432, 43242.34, 23432]
 
-import { bankAccounts } from "../data/data"
+
 
 export function getAllAccountsWithSumsOfDepositsLess2000(array) {
     // Your code goes here...
-    let sumOfBankAccounts = []
-    for (let i = 0; i < bankAccounts.length; i++) {
-        if (bankAccounts[i].hasOwnProperty('deposits') && bankAccounts[i].deposits.reduce((b, a) => b + a, 0) < 2000) {
-            sumOfBankAccounts.push(bankAccounts[i])
-        } else if (!bankAccounts[i].hasOwnProperty('deposits')) {
-            sumOfBankAccounts.push(bankAccounts[i])
+    let arrayOfBankAccounts = []
+    for (let i = 0; i < array.length; i++) {
+        let sum = 0;
+        //console.log(arrayOfBankAccounts)
+        if (array[i].deposits !== undefined) {
+            for (let j = 0; j < array[i].deposits.length; j++) {
+                console.log(array[i].deposits[j])
+                    //console.log(deposits)
+                sum += array[i].deposits[j]
+            }
+            //console.log(arrayOfBankAccounts)
         }
+
+        if (sum < 2000) {
+            arrayOfBankAccounts.push(array[i])
+
+            //console.log(arrayOfBankAccounts)
+        }
+
+        //console.log(arrayOfBankAccounts)
     }
-    return sumOfBankAccounts
+    return arrayOfBankAccounts
 }
 
 

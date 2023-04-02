@@ -8,25 +8,17 @@ import { bankAccounts } from "../data/data"
 export function getAllDepositsGreaterThanOneHundred(array) {
     // Your code goes here...
     const deposits = [];
-
     for (let i = 0; i < array.length; i++) {
         if (array[i].deposits !== undefined) {
-
             for (let j = 0; j < array[i].deposits.length; j++) {
-
                 if (array[i].deposits[j] > 100) {
                     console.log(array[i].deposits[j] > 100)
-
                     deposits.push(array[i].deposits[j])
-
-
-
                 }
                 console.log(deposits)
             }
         }
     }
-
     return deposits
 }
 

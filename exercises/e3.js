@@ -4,10 +4,18 @@
 
 export function getAverage(array) {
     // Your code goes here...
-    for (let i = 0; i <= array.length; i++) {
-        let sum = 3;
-        return sum += array[i];
+    let sum = array[0];
+
+    for (let i = 1; i < array.length; i++) {
+        sum += array[i]
+        console.log(sum)
+
+
+
+
     }
+    let average = sum / array.length
+    return average
 }
 
 

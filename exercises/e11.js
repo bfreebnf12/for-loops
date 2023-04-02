@@ -15,11 +15,9 @@ export function getAllWithdrawals(array) {
             for (let j = 0; j < array[i].withdrawals.length; j++) {
                 sum += array[i].withdrawals[j]
             }
-
         }
         withdrawal.push(sum)
         console.log(withdrawal)
-
     }
     return withdrawal
 }
